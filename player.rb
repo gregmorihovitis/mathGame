@@ -8,8 +8,23 @@ class Player
         @lives = 3
     end
    
-    def has_lost?
-      self.lives == 0  
+    def correct
+        puts "Correct!"
     end
 
+    def incorrect
+        puts "That's not right..."
+        @lives -= 1
+    end
+    
+    def lives_remaining
+        "#{@lives} / 3 Lives Remaining"
+    end
+
+    def has_lost?
+        @lives == 0  
+    end
+
+
+    
 end
